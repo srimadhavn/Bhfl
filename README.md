@@ -98,7 +98,7 @@ Open `http://localhost:3000`.
 ## Screenshots
 
 ### Postman Test
-![Postman Test](assets/screenshots/postman-test.png)
+![Postman Test](assets/screenshots/postman.png)
 
 ### Frontend UI
-![Frontend UI](assets/screenshots/frontend-ui.png)
+![Frontend UI](assets/screenshots/frontend.png)
