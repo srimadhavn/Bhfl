@@ -95,3 +95,10 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Screenshots
+
+### Postman Test
+![Postman Test](assets/screenshots/postman-test.png)
+
+### Frontend UI
+![Frontend UI](assets/screenshots/frontend-ui.png)
