@@ -21,7 +21,7 @@ The API validates node edges, removes duplicates, handles multi-parent rules, de
 
 1. `backend` - Express API service
 2. `frontend` - Next.js UI
-
+    
 ## API Specification
 
 1. Method: `POST`

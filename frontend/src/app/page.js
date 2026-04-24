@@ -23,6 +23,15 @@ const DEFAULT_INPUT = [
   "A->",
 ].join("\n");
 
+function normalizeEntry(entry) {
+  return entry
+    .trim()
+    .replace(/^["'\[\]\s]+/, "")
+    .replace(/["'\[\]\s]+$/, "")
+    .replace(/,$/, "")
+    .trim();
+}
+
 function formatTreeNode(label, node, depth = 0) {
   const children = Object.entries(node || {});
 
@@ -48,7 +57,7 @@ export default function Home() {
     () =>
       rawInput
         .split(/\r?\n|,/) 
-        .map((entry) => entry.trim())
+        .map((entry) => normalizeEntry(entry))
         .filter(Boolean),
     [rawInput],
   );
@@ -87,7 +96,6 @@ export default function Home() {
       <header className="hero">
         <p className="eyebrow">SRM Full Stack Challenge</p>
         <h1>BFHL Hierarchy Explorer</h1>
-        <p>Submit node edges and inspect structured hierarchy output from your hosted API.</p>
       </header>
 
       <main className="content-grid">
