@@ -11,6 +11,14 @@ This project contains:
 
 The API validates node edges, removes duplicates, handles multi-parent rules, detects cycles, computes tree depth, and returns summary insights.
 
+## Live Deployment
+
+1. Backend (Render): https://bhfl-7ksk.onrender.com
+2. Frontend (Vercel): https://bhfl-henna-rho.vercel.app/
+
+Render free tier inactivity note:
+If the backend has been idle, the first request may take up to 60 seconds while the server spins up again. Please wait and retry once if needed.
+
 ## Tech Stack
 
 1. Frontend: Next.js (App Router)
@@ -49,51 +57,6 @@ Sample request body:
    Later parent edges for that child are discarded.
 6. Pure cycle groups have `has_cycle: true`, `tree: {}`, and no `depth`.
 7. `largest_tree_root` uses lexicographical tie-break for equal depth trees.
-
-## Local Setup
-
-### 1. Backend
-
-```bash
-cd backend
-npm install
-```
-
-Create `.env` in `backend` using `.env.example`:
-
-```env
-PORT=8080
-USER_ID=fullname_ddmmyyyy
-EMAIL_ID=your.college@example.edu
-COLLEGE_ROLL_NUMBER=YOUR_ROLL_NUMBER
-```
-
-Run backend:
-
-```bash
-npm run dev
-```
-
-### 2. Frontend
-
-```bash
-cd frontend
-npm install
-```
-
-Create `.env.local` in `frontend` using `.env.local.example`:
-
-```env
-NEXT_PUBLIC_API_BASE_URL=http://localhost:8080
-```
-
-Run frontend:
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:3000`.
 
 ## Screenshots
 
